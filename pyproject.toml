@@ -18,7 +18,7 @@ dependencies = []
 openpipe_hello = "openpipe.cli.hello:main"
 openpipe_foo = "openpipe.cli.foo:main"
 openpipe_tree = "openpipe.cli.treeview:main"
-
+run_houdini = "openpipe.cli.run_houdini:main"
 [tool.setuptools]
 package-dir = {"" = "src"}
 
