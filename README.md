@@ -7,8 +7,8 @@ OpenPipe는 파이프라인 툴 개발을 시작하기 위한 기초적인 "Hell
 1.  **레포지토리 클론 (Clone):**
     ```powershell
     # 프로젝트를 로컬로 가져옵니다.
-    git clone https://github.com/initialfx/openPipe.git
-    cd openPipe
+    git clone https://github.com/initialfx/OpenPipe.git
+    cd OpenPipe
     
     # 권장 디렉토리 구조
     D:/Dev/OpenPipe 
