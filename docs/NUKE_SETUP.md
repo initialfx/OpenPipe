@@ -9,16 +9,16 @@
 시스템 환경 변수 `NUKE_PATH`에 `OpenPipe` 프로젝트 내의 `nuke/` 폴더 경로를 추가해야 합니다.
 
 ### 설정 예시 (Windows 기준)
-- `NUKE_PATH`: `C:\HOU\Dev\OpenPipe\nuke`
+- `NUKE_PATH`: `D:\Dev\OpenPipe\nuke`
 
 ### 수동 등록 (Powershell 가이드)
 ```powershell
-[System.Environment]::SetEnvironmentVariable("NUKE_PATH", "C:\HOU\Dev\OpenPipe\nuke", "User")
+[System.Environment]::SetEnvironmentVariable("NUKE_PATH", "D:\Dev\OpenPipe\nuke", "User")
 ```
 
 ## 3. PYTHONPATH 추가
 파이썬 모듈을 읽어오기 위해 `src/` 폴더도 `PYTHONPATH`에 추가해야 합니다.
-- `PYTHONPATH`: `C:\HOU\Dev\OpenPipe\src`
+- `PYTHONPATH`: `D:\Dev\OpenPipe\src`
 
 ## 4. 작동 원리
 - **`init.py`**: 누크 시작 시 Gizmos 경로와 전용 파이썬 라이브러리 경로를 플러그인 패스(`nuke.pluginAddPath`)에 추가합니다.

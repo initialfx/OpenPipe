@@ -1,2 +1,2 @@
-# Houdini Pipeline Module
-from . import sample
+"""Houdini Pipeline Module"""
+

@@ -4,7 +4,7 @@ Houdini 17.5 이상부터는 `houdini.env` 대신 JSON 방식의 **Package** 파
 
 ## 1. 전제 조건 (Prerequisites)
 - `OpenPipe`를 로컬에 클론 또는 다운로드한 상태여야 합니다.
-- 경로 예시: `C:/HOU/Dev/OpenPipe`
+- 경로 예시: `D:/Dev/OpenPipe`
 
 ## 2. Package 파일 생성 (`OpenPipe.json`)
 아래 경로 중 하나에 `OpenPipe.json` 파일을 생성합니다.
@@ -21,7 +21,7 @@ Houdini 17.5 이상부터는 `houdini.env` 대신 JSON 방식의 **Package** 파
 {
     "env": [
         {
-            "OPENPIPE_ROOT": "C:/HOU/Dev/OpenPipe",
+            "OPENPIPE_ROOT": "D:/Dev/OpenPipe",
             "PYTHONPATH": "$OPENPIPE_ROOT/src",
             "HOUDINI_PATH": "$OPENPIPE_ROOT/hou"
         }
@@ -33,7 +33,7 @@ Houdini 17.5 이상부터는 `houdini.env` 대신 JSON 방식의 **Package** 파
 - **`PYTHONPATH`**: `src/` 폴더를 등록하면, 파이썬이 그 안의 `openpipe/` 폴더를 하나의 **패키지**로 인식합니다.
 - **구조도**:
   ```text
-  C:/HOU/Dev/OpenPipe/src/
+  D:/Dev/OpenPipe/src/
   └── openpipe/         <-- 이 폴더가 'import openpipe' 대상입니다.
       ├── __init__.py   <-- 이것이 존재하므로 openpipe.py 파일은 필요 없습니다.
       ├── core/

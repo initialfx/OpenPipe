@@ -18,7 +18,7 @@ class Project:
 def get_shot_info(path):
     """
     파일 경로에서 샷 이름과 버전 정보를 추출합니다.
-    예: 'C:/Project/SK_010_v001.hip' -> {'shot': 'SK_010', 'version': 1}
+    예: 'D:/Dev/Projects/SK_010_v001.hip' -> {'shot': 'SK_010', 'version': 1}
     """
     filename = os.path.basename(path)
     
@@ -31,13 +31,3 @@ def get_shot_info(path):
             "version": int(match.group(2))
         }
     return None
-
-def test_production_logic():
-    """핵심 로직 테스트 함수"""
-    print("--- Testing Core Production Logic ---")
-    prj = Project("Demo_Show", "C:/HOU/Dev/Projects")
-    print(prj)
-    
-    sample_path = "C:/HOU/Dev/Projects/OpenPipe/shot_AS_010_v005.nk"
-    info = get_shot_info(sample_path)
-    print(f"Path Analysis: {info}")

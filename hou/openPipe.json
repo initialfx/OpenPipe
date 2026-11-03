@@ -1,7 +1,7 @@
 {
     "env": [
         {
-            "OPENPIPE_ROOT": "C:/HOU/Dev/OpenPipe",
+            "OPENPIPE_ROOT": "D:/Dev/OpenPipe",
             "PYTHONPATH": "$OPENPIPE_ROOT/src",
             "HOUDINI_PATH": "$OPENPIPE_ROOT/hou"
         }

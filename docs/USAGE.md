@@ -3,14 +3,14 @@
 `OpenPipe` 프로젝트는 특정 DCC(Houdini, Nuke) 환경이 없더라도 터미널에서 작동하는 범용 CLI(Command Line Interface) 도구를 제공합니다.
 
 ## 1. 전제 조건 (Prerequisites)
-- **Python 3.12+** 버전 권장
+- **Python 3.11+** 버전 권장
 - `pip`를 사용한 프로젝트 설치 과정이 필요합니다.
 
 ## 2. 설치 방법 (Installation)
-프로젝트 루트(`C:/HOU/Dev/OpenPipe`)에서 `editable mode`로 설치합니다.
+프로젝트 루트(`D:/Dev/OpenPipe`)에서 `editable mode`로 설치합니다.
 
 ```sh
-cd c:/HOU/Dev/OpenPipe
+cd D:/Dev/OpenPipe
 pip install -e .
 ```
 
@@ -22,8 +22,9 @@ pip install -e .
 
 | 명령어 | 기능 요약 | 예시 코드 (`src/openpipe/cli/`) |
 | :--- | :--- | :--- |
-| `hello` | 기본적인 인사말 출력 | `openpipe.cli.hello:main` |
-| `foo` | 추가적인 로직 테스트용 | `openpipe.cli.foo:main` |
+| `openpipe_hello` | 기본적인 인사말 출력 | `openpipe.cli.hello:main` |
+| `openpipe_foo` | 추가적인 로직 테스트용 | `openpipe.cli.foo:main` |
+| `openpipe_tree` | 디렉토리 트리 구조 출력 (`-d`, `-a` 옵션 지원) | `openpipe.cli.treeview:main` |
 
 ### 명령어 추가 방법 (Step-by-Step)
 1. `src/openpipe/core/` 하위에 실제 기능 로직을 작성합니다.
@@ -31,14 +32,14 @@ pip install -e .
 3. `pyproject.toml` 파일의 `[project.scripts]` 섹션에 명령어 이름을 등록합니다.
    ```toml
    [project.scripts]
-   my-new-cmd = "openpipe.cli.new_cmd:main"
+   openpipe_new_cmd = "openpipe.cli.new_cmd:main"
    ```
 4. `pip install -e .`를 다시 실행하면 새로운 명령어를 터미널에서 사용할 수 있습니다.
 
 ## 4. 환경 변수 수동 설정 (Path Setup)
 명령어 설치 외에도 파이썬이 어디서나 `openpipe` 패키지를 찾을 수 있도록 `PYTHONPATH` 설정을 추가하는 것을 권장합니다.
 
-- **Windows**: `setx PYTHONPATH "C:\HOU\Dev\OpenPipe\src;%PYTHONPATH%"`
+- **Windows**: `setx PYTHONPATH "D:\Dev\OpenPipe\src;%PYTHONPATH%"`
 - **Linux/macOS**: `export PYTHONPATH=$PWD/src:$PYTHONPATH`
 
 ## 5. 참고 문서 (References)

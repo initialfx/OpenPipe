@@ -1,2 +1,2 @@
-# Nuke Pipeline Module
-from . import sample
+"""Nuke Pipeline Module"""
+
